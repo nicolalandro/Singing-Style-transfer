@@ -6,7 +6,7 @@ import pandas as pd
 
 PATH = '/media/mint/Barracuda/Datasets/CommonVoiceMozillaIta/cv-corpus-6.1-2020-12-11/it'
 
-OUT = '/media/mint/Barracuda/Datasets/CommonVoiceMozillaIta/VoiceStyleTransfer/train'
+OUT = '/media/mint/Barracuda/Datasets/CommonVoiceMozillaIta/VoiceStyleTransfer/v2'
 
 if __name__ == '__main__':
     train_tsv_path = os.path.join(PATH, 'train.tsv')
@@ -17,8 +17,8 @@ if __name__ == '__main__':
     count = train_df['client_id'].value_counts(ascending=False)
     print(count[:5])
 
-    selected1 = '5f92abf45bb53630a853ffec6284a30311daa32d5e1dce986627c586f41963cf7db36fdc49c6f46597373cc36ee2130ffd7419381cc40267f4254ead759ba2e3'
-    selected2 = 'bfc5b28dfb00554c36867d82c475794292c5a7cfeb6accf30e674eec408bb3e5e57cd3216b49f50edde6a0e9dd35c5605212c6899cb3c692ad91b7848abf3fd3'
+    selected1 = count.index.to_list()[1]
+    selected2 = count.index.to_list()[2]
 
     for client_id, name in zip([selected1, selected2], ['A', 'B']):
         client_data_all = train_df[train_df['client_id'] == client_id]
@@ -26,3 +26,5 @@ if __name__ == '__main__':
             original_path = os.path.join(PATH, 'clips', client_data['path'])
             new_path = os.path.join(OUT, name, client_data['path'])
             os.system(f'cp "{original_path}" "{new_path}"')
+            break
+        break
