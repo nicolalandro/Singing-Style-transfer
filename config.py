@@ -8,9 +8,9 @@ n_features = 24  # Mceps coefficient
 n_frames = 128  # fixed-length segment randomly
 frame_period = 5.0  # extracted every 5 ms
 
-DATASET_PATH = "./data/"
-dataset_A = os.path.join(DATASET_PATH, "train/son")
-dataset_B = os.path.join(DATASET_PATH, "train/yuinna")
+DATASET_PATH = "/media/mint/Barracuda/Datasets/CommonVoiceMozillaIta/VoiceStyleTransfer"
+dataset_A = os.path.join(DATASET_PATH, "train/A")
+dataset_B = os.path.join(DATASET_PATH, "train/B")
 test_dir = os.path.join(DATASET_PATH, "test")
 direction = "A2B"
 
