@@ -14,6 +14,7 @@ dataset_B = os.path.join(DATASET_PATH, "train/B")
 test_dir = os.path.join(DATASET_PATH, "test")
 direction = "A2B"
 
-log_dir = "./log"
-model_dir = "./model"
-test_output_dir = './sample'
+OUT_PATH = "/media/mint/Barracuda/Models/VoiceStyleTransfer/1"
+log_dir = os.path.join(OUT_PATH, "log")
+model_dir = os.path.join(OUT_PATH, "model")
+test_output_dir = os.path.join(OUT_PATH, 'sample')

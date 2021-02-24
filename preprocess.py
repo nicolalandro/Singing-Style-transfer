@@ -4,8 +4,8 @@ from config import *
 
 def preprocess(dataset_A, dataset_B, sr=sr, n_features=n_features, frame_period=frame_period):
     print("Constructing MCEPs....")
-    dataset_A = load_wavs(dataset_A, sr=sr)
-    dataset_B = load_wavs(dataset_B, sr=sr)
+    dataset_A = load_mp3(dataset_A, sr=sr)
+    dataset_B = load_mp3(dataset_B, sr=sr)
 
     f0s_A, _, _, _, coded_sps_A = world_encode_data(wavs=dataset_A, fs=sr, frame_period=frame_period,
                                                     coded_dim=n_features)
