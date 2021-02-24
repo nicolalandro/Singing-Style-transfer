@@ -1,23 +1,27 @@
 # Singing-Style-transfer
+This is a fork of [Jeongseungwoo/Singing-Style-transfer](https://github.com/Jeongseungwoo/Singing-Style-transfer). 
+The aim is to create a method to transfer speaker style to another in order to create a single speaker dataset from many skears wav.
+
 
 ## Requirement
-- librosa==0.6.2
-- numpy==1.14.3
-- pyworld==0.2.4
-- tensorflow==1.9.0
-- python==3.6.5
+```bash
+pip install -r requirements
+```
 
 ## Usage
 Before Training, you need to Prepare two Datasets and each must be located in "./data/train/A", "./data/train/B"
-<pre><code>$ python train.py 
-$ python test.py</code></pre>
+```bash
+# config.py contains all paths configured
+python train.py 
+python test.py
+```
 
+## Citation
+```bibtex
+@misc{landro2021s2s,
+    Author = "Nicola Landro",
+    Title  = "Singing-Style-transfer",
+    note   = "{{https://github.com/nicolalandro/Singing-Style-transfer}}",
+    year   = 2021,}
+```
 
-
-## Paper
-[1] Cheng-Wei Wu, et al. Singing Style Transfer Using Cycle-Consistent Boundary Equilibrium Generative Adversarial Networks. 2018 
-<br>paper: https://arxiv.org/abs/1807.02254
-<br>
-
-[2] Takuhiro Kaneko, Hirokazu Kameoka. Parallel-Data-Free Voice Conversion Using Cycle-Consistent Adversarial Networks. 2017.
-<br>paper:https://arxiv.org/abs/1711.11293
